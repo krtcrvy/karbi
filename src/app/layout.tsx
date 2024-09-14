@@ -1,5 +1,5 @@
-import Footer from "@/components/common/footer";
-import Header from "@/components/common/header";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import { siteConfig } from "@/config/site";
 import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";

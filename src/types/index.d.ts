@@ -13,9 +13,14 @@ export type SiteConfig = {
   };
 };
 
+export type Path = {
+  name: string;
+  link: string;
+};
+
 // *API*
 // Github
-type Repo = {
+export type Repo = {
   repo: string;
   description: string;
   language: string;
