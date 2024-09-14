@@ -7,7 +7,7 @@ import Ripple from "@/components/magicui/ripple";
 
 export default function Hero() {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="py-32 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
         <div className="flex flex-col items-center">
           <Image
@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <Ripple mainCircleSize={300} />
+      <Ripple mainCircleSize={425} />
     </section>
   );
 }

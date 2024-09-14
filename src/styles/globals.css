@@ -66,4 +66,22 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .vertical-line::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #78716c;
+  }
+
+  .vertical-line-dark::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8a29e;
+  }
 }

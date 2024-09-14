@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "../styles/globals.css";
+import Socials from "@/components/common/socials";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -86,6 +87,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Socials />
           <Footer />
         </ThemeProvider>
       </body>
