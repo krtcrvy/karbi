@@ -6,6 +6,7 @@ import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import memoji from "../../../public/img/memoji-1.png";
+import SparklesText from "@/components/magicui/sparkles-text";
 
 export default function Hero() {
   return (
@@ -39,9 +40,11 @@ export default function Hero() {
             </BlurFade>
 
             <BlurFade delay={1} className="z-10">
-              <p className="mb-8 font-bold text-4xl lg:text-5xl font-space_grotesk">
-                I build things for the web
-              </p>
+              <SparklesText
+                text="I build things for the web"
+                colors={{ first: "#f97316", second: "#eab308" }}
+                className="mb-8 font-bold text-4xl lg:text-5xl font-space_grotesk"
+              />
             </BlurFade>
 
             <BlurFade delay={1.25} className="z-10">
@@ -64,7 +67,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <Ripple mainCircleSize={425} />
+      <Ripple mainCircleSize={432} />
     </section>
   );
 }
