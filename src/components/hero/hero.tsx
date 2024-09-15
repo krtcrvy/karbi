@@ -22,7 +22,7 @@ export default function Hero() {
             />
           </BlurFade>
 
-          <BlurFade className="z-10 bg-transparent backdrop-blur-2xl mb-8">
+          <BlurFade className="z-10 bg-transparent backdrop-blur-2xl">
             <Available />
           </BlurFade>
 
