@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin } from "lucide-react";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Socials() {
@@ -12,7 +12,7 @@ export default function Socials() {
         <ul className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <li>
             <Link href="https://github.com/krtcrvy" target="_blank">
-              <Github className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+              <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
             </Link>
           </li>
           <li>
@@ -20,7 +20,7 @@ export default function Socials() {
               href="https://www.linkedin.com/in/kurtcarvey-cadenas/"
               target="_blank"
             >
-              <Linkedin className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+              <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
             </Link>
           </li>
         </ul>
