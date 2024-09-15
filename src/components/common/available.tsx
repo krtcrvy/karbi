@@ -16,7 +16,7 @@ export default async function Available() {
     <div className="z-10 flex items-center justify-center">
       <div
         className={cn(
-          "group border border-[#0000001a] dark:border-[#ffffff1a] px-4 py-1.5 rounded-lg",
+          "group border border-[#0c0a091a] dark:border-[#fafaf91a] px-4 py-1.5 rounded-lg",
         )}
       >
         <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out gap-4">

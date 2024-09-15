@@ -16,7 +16,7 @@ export default function Header() {
     <header
       className={`fixed top-0 flex w-full justify-center ${
         scrolled
-          ? "bg-transparent border border-b-[#0000001a] dark:border-b-[#ffffff1a] backdrop-blur-2xl"
+          ? "bg-transparent border border-b-[#0c0a091a] dark:border-b-[#fafaf91a] backdrop-blur-2xl"
           : "bg-transparent"
       } z-30 transition-all ease-in`}
     >
