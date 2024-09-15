@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getRepo } from "@/lib/api/github";
 import { Repo } from "@/types";
+import ProjectCard from "@/components/projects/project-card";
 
 type RepoData = Repo[] | { error: string };
 
@@ -10,7 +11,7 @@ export default async function Projects() {
   return (
     <section id="projects">
       <div className="pb-16 px-4 mx-auto max-w-screen-xl lg:px-12">
-        <div className="max-w-screen-md mx-auto text-center mb-8">
+        <div className="max-w-screen-md mx-auto text-center mb-16">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
               Some things I&apos;ve built
@@ -31,6 +32,15 @@ export default async function Projects() {
               optimization.
             </p>
           </BlurFade>
+        </div>
+
+        <div className="max-w-screen-xl w-full mx-auto">
+          <div className="flex flex-col gap-8">
+            {Array.isArray(data) &&
+              data.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+          </div>
         </div>
       </div>
     </section>

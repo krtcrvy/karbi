@@ -28,4 +28,7 @@ export type Repo = {
   stars: number;
   link: string;
   website: string;
+  image: string;
+  forks: number;
+  owner: string;
 };
