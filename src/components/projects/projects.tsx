@@ -10,7 +10,7 @@ export default async function Projects() {
 
   return (
     <section id="projects">
-      <div className="pb-16 px-4 mx-auto max-w-screen-xl lg:px-12">
+      <div className="py-32 px-4 mx-auto max-w-screen-xl lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-16">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
@@ -38,7 +38,14 @@ export default async function Projects() {
           <div className="flex flex-col gap-8">
             {Array.isArray(data) &&
               data.map((project, index) => (
-                <ProjectCard key={index} project={project} />
+                <ProjectCard
+                  key={index}
+                  project={project}
+                  className="sticky"
+                  style={{
+                    top: `calc(96px + ${index * 40}px)`,
+                  }}
+                />
               ))}
           </div>
         </div>
