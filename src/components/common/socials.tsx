@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Socials() {
   return (
     <>
-      <div className="fixed right-auto bottom-0 left-10 z-10 hidden w-10 lg:block">
+      <BlurFade
+        className="fixed right-auto bottom-0 left-10 z-10 hidden w-10 lg:block"
+        delay={1.75}
+      >
         <ul className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <li>
             <Link href="https://github.com/krtcrvy" target="_blank">
@@ -20,9 +24,12 @@ export default function Socials() {
             </Link>
           </li>
         </ul>
-      </div>
+      </BlurFade>
 
-      <div className="fixed right-10 bottom-0 left-auto z-10 hidden w-10 lg:block">
+      <BlurFade
+        className="fixed right-10 bottom-0 left-auto z-10 hidden w-10 lg:block"
+        delay={1.75}
+      >
         <div className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <Link
             href="mailto:kurtcarvey.m.cadenas@gmail.com"
@@ -31,7 +38,7 @@ export default function Socials() {
             kurtcarvey.m.cadenas@gmail.com
           </Link>
         </div>
-      </div>
+      </BlurFade>
     </>
   );
 }
