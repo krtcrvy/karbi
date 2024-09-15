@@ -28,13 +28,13 @@ export default function Hero() {
 
           <div className="max-w-screen-md flex flex-col items-center justify-center">
             <BlurFade delay={0.5} className="z-10">
-              <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider">
+              <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
                 Hi, my name is
               </span>
             </BlurFade>
 
             <BlurFade delay={0.75} className="z-10">
-              <h1 className="mb-4 font-bold text-5xl lg:text-6xl font-space_grotesk">
+              <h1 className="mb-4 font-bold text-4xl md:text-5xl lg:text-6xl font-space_grotesk">
                 Kurt Carvey Cadenas
               </h1>
             </BlurFade>
@@ -43,12 +43,12 @@ export default function Hero() {
               <SparklesText
                 text="I build things for the web"
                 colors={{ first: "#f97316", second: "#eab308" }}
-                className="mb-8 font-bold text-4xl lg:text-5xl font-space_grotesk"
+                className="mb-8 font-bold text-3xl md:text-4xl lg:text-5xl font-space_grotesk"
               />
             </BlurFade>
 
             <BlurFade delay={1.25} className="z-10">
-              <p className="mb-12 text-lg lg:text-xl">
+              <p className="mb-12 text-base md:text-lg lg:text-xl text-muted-foreground">
                 I specialize in crafting and designing exceptional digital
                 experiences. My mission is to create accessible and user-centric
                 web applications that you and your audience will love

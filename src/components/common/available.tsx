@@ -7,7 +7,7 @@ const StatusIndicator = () => (
 
 const AvailableMessage = () => (
   <AnimatedShinyText>
-    <span>Available for new projects</span>
+    <span className="text-sm md:text-base">Available for new projects</span>
   </AnimatedShinyText>
 );
 
