@@ -1,12 +1,12 @@
 import Available from "@/components/common/available";
 import BlurFade from "@/components/magicui/blur-fade";
 import Ripple from "@/components/magicui/ripple";
+import SparklesText from "@/components/magicui/sparkles-text";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import memoji from "../../../public/img/memoji-1.png";
-import SparklesText from "@/components/magicui/sparkles-text";
 
 export default function Hero() {
   return (

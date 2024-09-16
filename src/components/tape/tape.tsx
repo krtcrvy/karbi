@@ -1,4 +1,4 @@
-import { StarFilledIcon } from "@radix-ui/react-icons";
+import { Rocket } from "lucide-react";
 import React from "react";
 
 export default function Tape() {
@@ -28,7 +28,7 @@ export default function Tape() {
                     <span className="text-stone-950 font-bold text-lg md:text-xl lg:text-2xl font-space_grotesk uppercase">
                       {word}
                     </span>
-                    <StarFilledIcon className="w-6 h-6 text-stone-950 -rotate-12" />
+                    <Rocket className="w-6 h-6 text-stone-950 -rotate-12 fill-stone-950" />
                   </div>
                 ))}
               </React.Fragment>
