@@ -38,7 +38,7 @@ export default async function Projects() {
         </div>
 
         <div className="max-w-screen-xl w-full flex flex-col items-center mx-auto">
-          <div className="flex flex-col gap-8 mb-16">
+          <BlurFade delay={0.75} className="flex flex-col gap-8 mb-8" inView>
             {Array.isArray(data) &&
               data.map((project, index) => (
                 <ProjectCard
@@ -46,13 +46,13 @@ export default async function Projects() {
                   project={project}
                   className="sticky"
                   style={{
-                    top: `calc(128px + ${index * 40}px)`,
+                    top: `calc(64px + ${index * 40}px)`,
                   }}
                 />
               ))}
-          </div>
+          </BlurFade>
 
-          <Button variant="ghost" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild>
             <Link
               target="_blank"
               href={`${siteConfig.links.github}?tab=repositories`}

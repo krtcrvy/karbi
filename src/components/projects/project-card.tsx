@@ -27,7 +27,7 @@ export default function ProjectCard({
   return (
     <Card
       className={cn(
-        `bg-card/50 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a]`,
+        `bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a]`,
         className,
       )}
       style={style}
