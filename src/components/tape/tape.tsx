@@ -25,7 +25,7 @@ export default function Tape() {
               <React.Fragment key={index}>
                 {words.map((word) => (
                   <div key={word} className="inline-flex items-center gap-4">
-                    <span className="text-stone-950 uppercase font-extrabold text-lg font-space_grotesk">
+                    <span className="text-stone-950 font-bold text-lg md:text-xl lg:text-2xl font-space_grotesk uppercase">
                       {word}
                     </span>
                     <StarFilledIcon className="w-6 h-6 text-stone-950 -rotate-12" />
