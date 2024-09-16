@@ -11,7 +11,7 @@ export default async function Projects() {
   return (
     <section id="projects">
       <div className="py-32 px-4 mx-auto max-w-screen-xl lg:px-12">
-        <div className="max-w-screen-md mx-auto text-center mb-16">
+        <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
               Some things I&apos;ve built
@@ -34,7 +34,7 @@ export default async function Projects() {
           </BlurFade>
         </div>
 
-        <div className="max-w-screen-xl w-full flex flex-col items-center mx-auto">
+        <div className="max-w-screen-sm lg:max-w-screen-xl w-full flex flex-col items-center mx-auto">
           <BlurFade delay={0.75} className="flex flex-col gap-16" inView>
             {Array.isArray(data) &&
               data.map((project, index) => (

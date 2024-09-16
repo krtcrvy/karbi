@@ -11,7 +11,7 @@ import SparklesText from "@/components/magicui/sparkles-text";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="py-32 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
+      <div className="pt-32 pb-24 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
         <div className="flex flex-col items-center">
           <BlurFade delay={0.25}>
             <Image
@@ -26,7 +26,7 @@ export default function Hero() {
             <Available />
           </BlurFade>
 
-          <div className="max-w-screen-md flex flex-col items-center justify-center">
+          <div className="max-w-screen-sm lg:max-w-screen-md flex flex-col items-center justify-center">
             <BlurFade delay={0.5}>
               <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
                 Hi, my name is
@@ -48,10 +48,13 @@ export default function Hero() {
             </BlurFade>
 
             <BlurFade delay={1.25}>
-              <p className="mb-12 text-base md:text-lg lg:text-xl text-muted-foreground">
+              <p className="mb-4 text-base md:text-lg lg:text-xl text-muted-foreground">
                 I specialize in crafting and designing exceptional digital
-                experiences. My mission is to create accessible and user-centric
-                web applications that you and your audience will love
+                experiences.
+              </p>
+              <p className="mb-12 text-base md:text-lg lg:text-xl text-muted-foreground">
+                My mission is to create accessible and user-centric web
+                applications that you and your audience will love
                 <span className="-ml-[0.10rem] mb-2 inline-block rotate-[30deg]">
                   <Heart className="h-3 w-3 text-primary" />
                 </span>
