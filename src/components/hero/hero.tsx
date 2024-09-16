@@ -1,11 +1,11 @@
 import Available from "@/components/common/available";
+import ScrollLink from "@/components/common/scroll-link";
 import BlurFade from "@/components/magicui/blur-fade";
 import Ripple from "@/components/magicui/ripple";
 import SparklesText from "@/components/magicui/sparkles-text";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import memoji from "../../../public/img/memoji-1.png";
 
 export default function Hero() {
@@ -64,7 +64,7 @@ export default function Hero() {
 
             <BlurFade delay={1.5}>
               <Button asChild size="lg">
-                <Link href="#projects">Check out my projects!</Link>
+                <ScrollLink id="projects">Check out my projects!</ScrollLink>
               </Button>
             </BlurFade>
           </div>
