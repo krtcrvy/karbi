@@ -1,13 +1,13 @@
 "use client";
 
-import Logo from "../common/logo";
-import { ModeToggle } from "../mode-toggle";
+import Logo from "@/components/common/logo";
+import ScrollLink from "@/components/common/scroll-link";
+import BlurFade from "@/components/magicui/blur-fade";
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import { useScroll } from "@/hooks/use-scroll";
 import paths from "@/paths";
 import { Path } from "@/types";
-import Link from "next/link";
-import { useScroll } from "@/hooks/use-scroll";
-import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Header() {
   const scrolled = useScroll(50);
@@ -26,14 +26,14 @@ export default function Header() {
 
           <div className="hidden justify-between items-center w-full lg:flex lg:w-auto gap-8">
             <ul className="inline-flex space-x-8">
-              {paths.map(({ name, link }: Path, index: number) => (
-                <Link
-                  href={link}
+              {paths.map(({ name }: Path, index: number) => (
+                <ScrollLink
+                  id={name.toLowerCase()}
                   key={index}
                   className="text-muted-foreground transition-colors ease-in hover:text-primary"
                 >
                   {name}
-                </Link>
+                </ScrollLink>
               ))}
             </ul>
 

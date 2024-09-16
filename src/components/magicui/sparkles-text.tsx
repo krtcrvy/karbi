@@ -1,7 +1,7 @@
 "use client";
 
-import { CSSProperties, ReactElement, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { CSSProperties, ReactElement, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -102,7 +102,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
     const interval = setInterval(updateStars, 100);
 
     return () => clearInterval(interval);
-  }, [colors.first, colors.second]);
+  }, [colors.first, colors.second, sparklesCount]);
 
   return (
     <div
