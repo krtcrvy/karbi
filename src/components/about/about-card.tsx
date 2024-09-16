@@ -1,8 +1,8 @@
 "use client";
 
 import { MagicCard } from "@/components/magicui/magic-card";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 export default function AboutCard({
   children,
