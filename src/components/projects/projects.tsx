@@ -1,10 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import ProjectCard from "@/components/projects/project-card";
-import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
 import { getRepo } from "@/lib/api/github";
 import { Repo } from "@/types";
-import Link from "next/link";
 
 type RepoData = Repo[] | { error: string };
 
@@ -38,7 +35,7 @@ export default async function Projects() {
         </div>
 
         <div className="max-w-screen-xl w-full flex flex-col items-center mx-auto">
-          <BlurFade delay={0.75} className="flex flex-col gap-8 mb-8" inView>
+          <BlurFade delay={0.75} className="flex flex-col gap-16" inView>
             {Array.isArray(data) &&
               data.map((project, index) => (
                 <ProjectCard
@@ -51,15 +48,6 @@ export default async function Projects() {
                 />
               ))}
           </BlurFade>
-
-          <Button variant="outline" size="lg" asChild>
-            <Link
-              target="_blank"
-              href={`${siteConfig.links.github}?tab=repositories`}
-            >
-              See More...
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
