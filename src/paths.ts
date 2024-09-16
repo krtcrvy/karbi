@@ -1,7 +1,7 @@
 const paths = [
   {
     name: "Home",
-    link: "/",
+    link: "#home",
   },
   {
     name: "Projects",

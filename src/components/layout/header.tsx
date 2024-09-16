@@ -1,13 +1,13 @@
 "use client";
 
-import BlurFade from "@/components/magicui/blur-fade";
+import Logo from "../common/logo";
+import { ModeToggle } from "../mode-toggle";
 import { Button } from "@/components/ui/button";
-import { useScroll } from "@/hooks/use-scroll";
 import paths from "@/paths";
 import { Path } from "@/types";
 import Link from "next/link";
-import Logo from "../common/logo";
-import { ModeToggle } from "../mode-toggle";
+import { useScroll } from "@/hooks/use-scroll";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Header() {
   const scrolled = useScroll(50);

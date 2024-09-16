@@ -10,7 +10,7 @@ import memoji from "../../../public/img/memoji-1.png";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="home">
       <div className="pt-32 pb-24 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
         <div className="flex flex-col items-center">
           <BlurFade delay={0.25}>
