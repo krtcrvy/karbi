@@ -5,8 +5,8 @@ import ScrollLink from "@/components/common/scroll-link";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import { paths } from "@/consts";
 import { useScroll } from "@/hooks/use-scroll";
-import paths from "@/paths";
 import { Path } from "@/types";
 
 export default function Header() {
