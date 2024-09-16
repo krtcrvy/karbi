@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import BlurFade from "@/components/magicui/blur-fade";
+import { siteConfig } from "@/config/site";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export default function Socials() {
   return (
@@ -11,15 +12,15 @@ export default function Socials() {
       >
         <ul className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <li>
-            <Link href="https://github.com/krtcrvy" target="_blank">
+            <Link
+              href={`${siteConfig.links.github}?tab=repositories`}
+              target="_blank"
+            >
               <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
             </Link>
           </li>
           <li>
-            <Link
-              href="https://www.linkedin.com/in/kurtcarvey-cadenas/"
-              target="_blank"
-            >
+            <Link href={siteConfig.links.linkedin} target="_blank">
               <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
             </Link>
           </li>
@@ -32,7 +33,7 @@ export default function Socials() {
       >
         <div className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <Link
-            href="mailto:kurtcarvey.m.cadenas@gmail.com"
+            href={`mailto:${siteConfig.links.email}`}
             className="text-sm text-muted-foreground tracking-widest transition-colors ease-in [writing-mode:vertical-rl] hover:text-foreground"
           >
             kurtcarvey.m.cadenas@gmail.com

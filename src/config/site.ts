@@ -13,5 +13,6 @@ export const siteConfig: SiteConfig = {
     facebook: "https://facebook.com/krtcrvy",
     twitter: "https://x.com/krtcrvy",
     linkedin: "https://www.linkedin.com/in/kurtcarvey-cadenas",
+    email: "kurtcarvey.m.cadenas@gmail.com",
   },
 };
