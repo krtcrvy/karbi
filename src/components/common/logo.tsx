@@ -4,7 +4,7 @@ import logo from "../../../public/img/logo.png";
 
 export default function Logo() {
   return (
-    <Link href="/">
+    <Link href="#home">
       <Image
         src={logo}
         alt="Karbi Logo"
