@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="py-32 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
         <div className="flex flex-col items-center">
-          <BlurFade delay={0.25} className="z-10">
+          <BlurFade delay={0.25}>
             <Image
               src={memoji}
               alt="Person peeking from behind of a laptop."
@@ -22,24 +22,24 @@ export default function Hero() {
             />
           </BlurFade>
 
-          <BlurFade className="z-10 bg-transparent backdrop-blur-2xl">
+          <BlurFade delay={0.25}>
             <Available />
           </BlurFade>
 
           <div className="max-w-screen-md flex flex-col items-center justify-center">
-            <BlurFade delay={0.5} className="z-10">
+            <BlurFade delay={0.5}>
               <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
                 Hi, my name is
               </span>
             </BlurFade>
 
-            <BlurFade delay={0.75} className="z-10">
+            <BlurFade delay={0.75}>
               <h1 className="mb-4 font-bold text-4xl md:text-5xl lg:text-6xl font-space_grotesk">
                 Kurt Carvey Cadenas
               </h1>
             </BlurFade>
 
-            <BlurFade delay={1} className="z-10">
+            <BlurFade delay={1}>
               <SparklesText
                 text="I build things for the web"
                 colors={{ first: "#f97316", second: "#eab308" }}
@@ -47,7 +47,7 @@ export default function Hero() {
               />
             </BlurFade>
 
-            <BlurFade delay={1.25} className="z-10">
+            <BlurFade delay={1.25}>
               <p className="mb-12 text-base md:text-lg lg:text-xl text-muted-foreground">
                 I specialize in crafting and designing exceptional digital
                 experiences. My mission is to create accessible and user-centric
@@ -59,7 +59,7 @@ export default function Hero() {
               </p>
             </BlurFade>
 
-            <BlurFade delay={1.5} className="z-10">
+            <BlurFade delay={1.5}>
               <Button asChild size="lg">
                 <Link href="#projects">Check out my projects!</Link>
               </Button>
@@ -67,7 +67,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <Ripple mainCircleSize={432} />
+      <Ripple mainCircleSize={432} className="-z-10" />
     </section>
   );
 }

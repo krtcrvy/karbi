@@ -1,9 +1,9 @@
 "use client";
 
-import { Repo } from "@/types";
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { Repo } from "@/types";
 import {
-  CodeIcon,
   GitHubLogoIcon,
   GlobeIcon,
   PersonIcon,
@@ -12,7 +12,6 @@ import {
 import { GitFork } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Repo;
@@ -28,7 +27,7 @@ export default function ProjectCard({
   return (
     <Card
       className={cn(
-        `border border-[#0c0a091a] dark:border-[#fafaf91a] bg-transparent backdrop-blur-2xl`,
+        `bg-card/50 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a]`,
         className,
       )}
       style={style}
@@ -61,13 +60,6 @@ export default function ProjectCard({
               <GitFork className="w-4 h-4" />
               <span>{project.forks}</span>
             </div>
-
-            <span className="hidden lg:block">•</span>
-
-            <div className="flex items-center gap-2">
-              <CodeIcon className="w-4 h-4" />
-              <span>{project.language}</span>
-            </div>
           </div>
 
           <div className="flex items-center gap-4">
@@ -83,7 +75,7 @@ export default function ProjectCard({
 
             <Link
               target="_blank"
-              href={project.repo}
+              href={project.link}
               rel="noopener noreferrer"
               aria-label={project.repo}
               className="text-muted-foreground transition-colors ease-in hover:text-foreground"
@@ -99,6 +91,7 @@ export default function ProjectCard({
           width={1200}
           height={600}
           className="rounded-lg"
+          priority
         />
       </div>
     </Card>
