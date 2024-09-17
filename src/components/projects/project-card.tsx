@@ -1,11 +1,10 @@
 "use client";
 
-import { MagicCard } from "@/components/magicui/magic-card";
+import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Repo } from "@/types";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { GitFork, Globe, Star, User } from "lucide-react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -21,14 +20,9 @@ export default function ProjectCard({
   className,
   style,
 }: ProjectCardProps) {
-  const { theme } = useTheme();
-
   return (
     <div className={cn(className)} style={style}>
-      <MagicCard
-        className="bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] rounded-xl"
-        gradientColor={theme === "dark" ? "#292524" : "#d6d3d155"}
-      >
+      <Card className="bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] rounded-xl">
         <div className="grid grid-cols-1 items-center lg:grid-cols-2 p-4 gap-4 md:p-8 md:gap-8 lg:p-16 lg:gap-16">
           <div className="mb-4 md:mb-0">
             <h3 className="mb-4 font-bold text-2xl md:text-3xl lg:text-4xl font-space_grotesk">
@@ -91,7 +85,7 @@ export default function ProjectCard({
             priority
           />
         </div>
-      </MagicCard>
+      </Card>
     </div>
   );
 }

@@ -40,11 +40,11 @@ export default function About() {
             />
 
             <div className="w-40 mx-auto">
-              <Image src={bookImage} alt="Book cover" />
+              <Image src={bookImage} alt="Book cover" priority />
             </div>
           </AboutCard>
 
-          <AboutCard className="h-80 p-0">
+          <AboutCard className="h-80 p-0 flex flex-col">
             <AboutCardHeader
               title="My Tech Stack"
               description="Discover the cutting-edge technologies and tools I leverage to create outstanding digital experiences."
@@ -59,16 +59,23 @@ export default function About() {
             />
           </AboutCard>
 
-          <AboutCard>
+          <AboutCard className="h-80 p-0 flex flex-col">
             <AboutCardHeader
               title="Beyond the Code"
               description="Discover more about my interests and hobbies outside the digital world."
+              className="px-4 py-4"
             />
 
-            <div>
+            <div className="relative flex-1">
               {hobbies.map((hobby, index) => (
-                <div key={index}>
-                  <span>{hobby.title}</span>
+                <div
+                  key={index}
+                  className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 rounded-full absolute"
+                  style={{ left: hobby.left, top: hobby.top }}
+                >
+                  <span className="font-medium text-stone-950">
+                    {hobby.title}
+                  </span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
