@@ -1,4 +1,4 @@
-import { CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SparkleIcon } from "lucide-react";
 
 interface AboutCardHeaderProps {
@@ -13,12 +13,12 @@ export default function AboutCardHeader({
   return (
     <CardHeader>
       <div className="inline-flex items-center gap-2 md:gap-4">
-        <SparkleIcon className="w-5 h-5 md:w-6 md:h-6 text-primary fill-primary" />
-        <CardTitle className="text-xl md:text-2xl lg:text-3xl font-space_grotesk">
+        <SparkleIcon className="h-5 w-5 fill-primary text-primary md:h-6 md:w-6" />
+        <CardTitle className="font-space_grotesk text-xl md:text-2xl lg:text-3xl">
           {title}
         </CardTitle>
       </div>
-      <CardDescription className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-sm">
+      <CardDescription className="max-w-sm text-muted-foreground text-sm md:text-base lg:text-lg">
         {description}
       </CardDescription>
     </CardHeader>

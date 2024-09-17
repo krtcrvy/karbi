@@ -10,7 +10,7 @@ export default function AboutCard({
   return (
     <Card
       className={cn(
-        `bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] shadow-md overflow-hidden`,
+        `overflow-hidden border border-[#0c0a091a] bg-card/75 shadow-md backdrop-blur-sm dark:border-[#fafaf91a] dark:bg-card/75`,
         className,
       )}
     >

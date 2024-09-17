@@ -12,22 +12,22 @@ import memoji from "../../../public/img/memoji-2.png";
 export default function About() {
   return (
     <section id="about">
-      <div className="pt-16 pb-8 px-4 mx-auto max-w-screen-xl lg:pt-32 lg:pb-16 lg:px-12">
-        <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
+      <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 lg:px-12 lg:pt-32 lg:pb-16">
+        <div className="mx-auto mb-16 max-w-screen-sm text-center lg:max-w-screen-md">
           <BlurFade inView>
-            <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
+            <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
               About Me
             </span>
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
-            <h2 className="mb-8 font-bold text-3xl md:text-4xl lg:text-5xl font-space_grotesk">
+            <h2 className="mb-8 font-bold font-space_grotesk text-3xl md:text-4xl lg:text-5xl">
               A Glimpse Into My World
             </h2>
           </BlurFade>
 
           <BlurFade delay={0.5} inView>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
+            <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
               Learn more about who I am, what I do, and what inspires me to keep
               pushing the boundaries of what&apos;s possible.
             </p>
@@ -47,7 +47,7 @@ export default function About() {
                   description="Explore the books shaping my perspectives."
                 />
                 <CardContent>
-                  <div className="w-40 mx-auto">
+                  <div className="mx-auto w-40">
                     <Image src={bookImage} alt="Book cover" priority />
                   </div>
                 </CardContent>
@@ -71,23 +71,23 @@ export default function About() {
             </BlurFade>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <BlurFade
               delay={0.25}
               className="md:col-span-3 lg:col-span-2"
               inView
             >
-              <AboutCard className="h-80 flex flex-col">
+              <AboutCard className="flex h-80 flex-col">
                 <AboutCardHeader
                   title="Beyond the Code"
                   description="Explore my interests and hobbies beyond the digital realm."
                 />
 
-                <CardContent className="pt-6 relative flex-1">
+                <CardContent className="relative flex-1 pt-6">
                   {hobbies.map((hobby, index) => (
                     <div
                       key={index}
-                      className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 rounded-full absolute shadow"
+                      className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-1.5 shadow dark:from-orange-500 dark:to-orange-600"
                       style={{ left: hobby.left, top: hobby.top }}
                     >
                       <span className="font-medium text-stone-950">
@@ -105,13 +105,13 @@ export default function About() {
               className="md:col-span-2 lg:col-span-1"
               inView
             >
-              <AboutCard className="h-80 relative">
+              <AboutCard className="relative h-80">
                 <Image
                   src={mapImage}
                   alt="Map"
-                  className="h-full w-full object-cover object-left-top rounded-xl"
+                  className="h-full w-full rounded-xl object-cover object-left-top"
                 />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] shadow">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-20 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 shadow outline outline-2 outline-[#0c0a091a] dark:from-orange-500 dark:to-orange-600 dark:outline-[#fafaf91a]">
                   <Image
                     src={memoji}
                     alt="Smiling Memoji"

@@ -16,15 +16,15 @@ export default function Header() {
     <header
       className={`fixed top-0 flex w-full justify-center ${
         scrolled
-          ? "bg-background/30 border border-b-[#0c0a091a] dark:border-b-[#fafaf91a] backdrop-blur-sm shadow-md"
+          ? "border border-b-[#0c0a091a] bg-background/30 shadow-md backdrop-blur-sm dark:border-b-[#fafaf91a]"
           : "bg-transparent"
       } z-30 transition-all ease-in`}
     >
       <BlurFade className="w-full">
-        <nav className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 lg:px-6 py-2.5 w-full">
+        <nav className="mx-auto flex w-full max-w-screen-xl flex-wrap items-center justify-between px-4 py-2.5 lg:px-6">
           <Logo />
 
-          <div className="hidden justify-between items-center w-full lg:flex lg:w-auto gap-8">
+          <div className="hidden w-full items-center justify-between gap-8 lg:flex lg:w-auto">
             <ul className="inline-flex space-x-8">
               {paths.map(({ name }: Path, index: number) => (
                 <ScrollLink

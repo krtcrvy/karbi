@@ -8,7 +8,7 @@ export default function Logo() {
       <Image
         src={logo}
         alt="Karbi Logo"
-        className="w-6 h-6 sm:w-9 sm:h-9"
+        className="h-6 w-6 sm:h-9 sm:w-9"
         priority
       />
     </ScrollLink>

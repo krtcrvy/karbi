@@ -1,12 +1,13 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Repo } from "@/types";
@@ -15,7 +16,6 @@ import { GitFork, Globe, Star, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
   project: Repo;
@@ -30,34 +30,34 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className={cn(className)} style={style}>
-      <Card className="bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] shadow-md md:grid md:grid-cols-2 md:items-center">
+      <Card className="border border-[#0c0a091a] bg-card/75 shadow-md backdrop-blur-sm md:grid md:grid-cols-2 md:items-center dark:border-[#fafaf91a] dark:bg-card/75">
         <div>
           <CardHeader>
-            <CardTitle className="text-xl md:text-2xl lg:text-3xl font-space_grotesk">
+            <CardTitle className="font-space_grotesk text-xl md:text-2xl lg:text-3xl">
               {project.repo}
             </CardTitle>
-            <CardDescription className="text-sm md:text-base lg:text-lg text-muted-foreground">
+            <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
               {project.description}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-col md:flex-row lg:items-center gap-2 lg:gap-4 mb-6 text-muted-foreground">
+            <div className="mb-6 flex flex-col gap-2 text-muted-foreground md:flex-row lg:items-center lg:gap-4">
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5" />
+                <User className="h-5 w-5" />
                 <span className="text-sm md:text-base">{project.owner}</span>
               </div>
 
               <span className="hidden md:block">•</span>
 
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5" />
+                <Star className="h-5 w-5" />
                 <span className="text-sm lg:text-base">{project.stars}</span>
               </div>
 
               <span className="hidden md:block">•</span>
 
               <div className="flex items-center gap-2">
-                <GitFork className="w-5 h-5" />
+                <GitFork className="h-5 w-5" />
                 <span className="text-sm md:text-base">{project.forks}</span>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function ProjectCard({
                   rel="noopener noreferrer"
                   aria-label={project.repo}
                 >
-                  <Globe className="w-6 h-6" />
+                  <Globe className="h-6 w-6" />
                 </Link>
               </Button>
 
@@ -81,7 +81,7 @@ export default function ProjectCard({
                   rel="noopener noreferrer"
                   aria-label={project.repo}
                 >
-                  <GitHubLogoIcon className="w-6 h-6" />
+                  <GitHubLogoIcon className="h-6 w-6" />
                 </Link>
               </Button>
             </div>

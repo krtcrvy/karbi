@@ -16,20 +16,20 @@ export default function TechStackItems({
   return (
     <div
       className={cn(
-        `flex gradient-mask-r-[transparent,black_10%,black_90%,transparent]`,
+        `gradient-mask-r-[transparent,black_10%,black_90%,transparent] flex`,
         className,
       )}
     >
       <div
         className={cn(
-          `flex flex-none py-0.5 gap-6 pr-4`,
+          `flex flex-none gap-6 py-0.5 pr-4`,
           itemsWrapperClassName,
         )}
       >
         {items.map((tech: TechStackItems, index: number) => (
           <div
             key={index}
-            className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] bg-background/30 backdrop-blur-sm rounded-lg shadow"
+            className="inline-flex items-center gap-4 rounded-lg bg-background/30 px-3 py-2 shadow outline outline-2 outline-[#0c0a091a] backdrop-blur-sm dark:outline-[#fafaf91a]"
           >
             <TechIcon component={tech.iconType} />
             <span className="font-semibold">{tech.title}</span>

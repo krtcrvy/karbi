@@ -12,22 +12,22 @@ export default async function Projects() {
   if ("error" in data) {
     return (
       <section id="projects">
-        <div className="pt-16 pb-8 px-4 mx-auto max-w-screen-xl lg:pt-32 lg:pb-16 lg:px-12">
-          <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
+        <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 lg:px-12 lg:pt-32 lg:pb-16">
+          <div className="mx-auto mb-16 max-w-screen-sm text-center lg:max-w-screen-md">
             <BlurFade inView>
-              <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
+              <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
                 Some things I&apos;ve built
               </span>
             </BlurFade>
 
             <BlurFade delay={0.25} inView>
-              <h2 className="mb-8 font-bold text-3xl md:text-4xl lg:text-5xl font-space_grotesk">
+              <h2 className="mb-8 font-bold font-space_grotesk text-3xl md:text-4xl lg:text-5xl">
                 Featured Projects
               </h2>
             </BlurFade>
 
             <BlurFade delay={0.5} inView>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
+              <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
                 Here are some of the projects that I have worked on recently.
                 Each project showcases my skills in web development, including
                 front-end design, back-end integration, and user experience
@@ -46,22 +46,22 @@ export default async function Projects() {
 
   return (
     <section id="projects">
-      <div className="pt-16 pb-8 px-4 mx-auto max-w-screen-xl lg:pt-32 lg:pb-16 lg:px-12">
-        <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
+      <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 lg:px-12 lg:pt-32 lg:pb-16">
+        <div className="mx-auto mb-16 max-w-screen-sm text-center lg:max-w-screen-md">
           <BlurFade inView>
-            <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
+            <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
               Some things I&apos;ve built
             </span>
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
-            <h2 className="mb-8 font-bold text-3xl md:text-4xl lg:text-5xl font-space_grotesk">
+            <h2 className="mb-8 font-bold font-space_grotesk text-3xl md:text-4xl lg:text-5xl">
               Featured Projects
             </h2>
           </BlurFade>
 
           <BlurFade delay={0.5} inView>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
+            <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
               Take a look at some of my recent projects, where innovation meets
               impact. Each one tells a story of problem-solving, creativity, and
               technical expertise.
