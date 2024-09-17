@@ -1,6 +1,6 @@
 import AboutCard from "@/components/about/about-card";
 import AboutCardHeader from "@/components/about/about-card-header";
-import TechIcon from "@/components/common/tech-icon";
+import TechStackItems from "@/components/common/tech-stack-items";
 import BlurFade from "@/components/magicui/blur-fade";
 import { hobbies, techStackItems } from "@/consts";
 import Image from "next/image";
@@ -32,7 +32,7 @@ export default function About() {
           </BlurFade>
         </div>
 
-        <div className="max-w-screen-sm lg:max-w-screen-xl w-full mx-auto">
+        <div className="max-w-screen-sm lg:max-w-screen-xl w-full mx-auto flex flex-col gap-8">
           <AboutCard className="h-80">
             <AboutCardHeader
               title="My Reads"
@@ -44,20 +44,19 @@ export default function About() {
             </div>
           </AboutCard>
 
-          <AboutCard>
+          <AboutCard className="h-80 p-0">
             <AboutCardHeader
               title="My Tech Stack"
               description="Discover the cutting-edge technologies and tools I leverage to create outstanding digital experiences."
+              className="px-4 pt-4"
             />
 
-            <div>
-              {techStackItems.map((tech, index) => (
-                <div key={index}>
-                  <TechIcon component={tech.iconType} />
-                  <span>{tech.title}</span>
-                </div>
-              ))}
-            </div>
+            <TechStackItems items={techStackItems} className="mt-4" />
+            <TechStackItems
+              items={techStackItems}
+              className="mt-4"
+              itemsWrapperClassName="-translate-x-1/2"
+            />
           </AboutCard>
 
           <AboutCard>

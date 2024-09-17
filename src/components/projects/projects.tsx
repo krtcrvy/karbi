@@ -73,7 +73,7 @@ export default async function Projects() {
         </div>
 
         <div className="max-w-screen-sm lg:max-w-screen-xl w-full flex flex-col items-center mx-auto">
-          <BlurFade delay={0.75} className="flex flex-col gap-16" inView>
+          <BlurFade delay={0.75} className="flex flex-col gap-8" inView>
             {Array.isArray(data) &&
               data.map((project, index) => (
                 <ProjectCard

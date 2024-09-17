@@ -19,6 +19,11 @@ export type Path = {
   link: string;
 };
 
+export type TechStackItems = {
+  title: string;
+  iconType: React.ElementType;
+};
+
 // *API*
 // Github
 export type Repo = {
