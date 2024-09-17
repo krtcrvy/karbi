@@ -22,14 +22,14 @@ export default function TechStackItems({
     >
       <div
         className={cn(
-          `flex flex-none py-0.5 gap-4 pr-4`,
+          `flex flex-none py-0.5 gap-6 pr-4`,
           itemsWrapperClassName,
         )}
       >
         {items.map((tech: TechStackItems, index: number) => (
           <div
             key={index}
-            className="inline-flex items-center gap-4 py-2 px-4 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] rounded-lg bg-background/30 backdrop-blur-sm shadow"
+            className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] bg-background/30 backdrop-blur-sm rounded-lg shadow"
           >
             <TechIcon component={tech.iconType} />
             <span className="font-semibold">{tech.title}</span>

@@ -1,6 +1,13 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Repo } from "@/types";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
@@ -8,6 +15,7 @@ import { GitFork, Globe, Star, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
   project: Repo;
@@ -22,69 +30,73 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className={cn(className)} style={style}>
-      <Card className="bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] rounded-xl shadow-md">
-        <div className="grid grid-cols-1 items-center lg:grid-cols-2 p-4 gap-4 md:p-8 md:gap-8 lg:p-16 lg:gap-16">
-          <div className="mb-4 md:mb-0">
-            <h3 className="mb-4 font-bold text-2xl md:text-3xl lg:text-4xl font-space_grotesk">
+      <Card className="bg-card/75 dark:bg-card/75 backdrop-blur-sm border border-[#0c0a091a] dark:border-[#fafaf91a] shadow-md md:grid md:grid-cols-2 md:items-center">
+        <div>
+          <CardHeader>
+            <CardTitle className="text-xl md:text-2xl lg:text-3xl font-space_grotesk">
               {project.repo}
-            </h3>
-            <p className="mb-4 text-sm md:text-base lg:text-lg line-clamp-3 text-muted-foreground">
+            </CardTitle>
+            <CardDescription className="text-sm md:text-base lg:text-lg text-muted-foreground">
               {project.description}
-            </p>
-
-            <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-4 mb-6 text-muted-foreground">
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col md:flex-row lg:items-center gap-2 lg:gap-4 mb-6 text-muted-foreground">
               <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>{project.owner}</span>
+                <User className="w-5 h-5" />
+                <span className="text-sm md:text-base">{project.owner}</span>
               </div>
 
-              <span className="hidden lg:block">•</span>
+              <span className="hidden md:block">•</span>
 
               <div className="flex items-center gap-2">
-                <Star className="w-4 h-4" />
-                <span>{project.stars}</span>
+                <Star className="w-5 h-5" />
+                <span className="text-sm lg:text-base">{project.stars}</span>
               </div>
 
-              <span className="hidden lg:block">•</span>
+              <span className="hidden md:block">•</span>
 
               <div className="flex items-center gap-2">
-                <GitFork className="w-4 h-4" />
-                <span>{project.forks}</span>
+                <GitFork className="w-5 h-5" />
+                <span className="text-sm md:text-base">{project.forks}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <Link
-                target="_blank"
-                href={project.website}
-                rel="noopener noreferrer"
-                aria-label={project.repo}
-                className="text-muted-foreground transition-colors ease-in hover:text-foreground"
-              >
-                <Globe className="w-6 h-6" />
-              </Link>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="icon" asChild>
+                <Link
+                  target="_blank"
+                  href={project.website}
+                  rel="noopener noreferrer"
+                  aria-label={project.repo}
+                >
+                  <Globe className="w-6 h-6" />
+                </Link>
+              </Button>
 
-              <Link
-                target="_blank"
-                href={project.link}
-                rel="noopener noreferrer"
-                aria-label={project.repo}
-                className="text-muted-foreground transition-colors ease-in hover:text-foreground"
-              >
-                <GitHubLogoIcon className="w-6 h-6" />
-              </Link>
+              <Button variant="outline" size="icon" asChild>
+                <Link
+                  target="_blank"
+                  href={project.link}
+                  rel="noopener noreferrer"
+                  aria-label={project.repo}
+                >
+                  <GitHubLogoIcon className="w-6 h-6" />
+                </Link>
+              </Button>
             </div>
-          </div>
-
+          </CardContent>
+        </div>
+        <CardFooter className="md:pt-6">
           <Image
             src={project.image}
             alt={project.repo}
             width={1200}
             height={600}
-            className="rounded-lg"
+            className="rounded-xl"
             priority
           />
-        </div>
+        </CardFooter>
       </Card>
     </div>
   );

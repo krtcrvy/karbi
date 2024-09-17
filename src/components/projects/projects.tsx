@@ -12,7 +12,7 @@ export default async function Projects() {
   if ("error" in data) {
     return (
       <section id="projects">
-        <div className="py-32 px-4 mx-auto max-w-screen-xl lg:px-12">
+        <div className="pt-16 pb-8 px-4 mx-auto max-w-screen-xl lg:pt-32 lg:pb-16 lg:px-12">
           <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
             <BlurFade inView>
               <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
@@ -36,11 +36,9 @@ export default async function Projects() {
             </BlurFade>
           </div>
 
-          <div className="max-w-screen-sm lg:max-w-screen-xl w-full flex flex-col items-center mx-auto">
-            <BlurFade delay={0.75} className="flex flex-col gap-16" inView>
-              <ProjectsSkeleton />
-            </BlurFade>
-          </div>
+          <BlurFade delay={0.75} className="flex flex-col gap-8" inView>
+            <ProjectsSkeleton />
+          </BlurFade>
         </div>
       </section>
     );
@@ -48,7 +46,7 @@ export default async function Projects() {
 
   return (
     <section id="projects">
-      <div className="py-32 px-4 mx-auto max-w-screen-xl lg:px-12">
+      <div className="pt-16 pb-8 px-4 mx-auto max-w-screen-xl lg:pt-32 lg:pb-16 lg:px-12">
         <div className="max-w-screen-sm lg:max-w-screen-md mx-auto text-center mb-16">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary uppercase tracking-wider text-sm md:text-base">
@@ -72,21 +70,19 @@ export default async function Projects() {
           </BlurFade>
         </div>
 
-        <div className="max-w-screen-sm lg:max-w-screen-xl w-full flex flex-col items-center mx-auto">
-          <BlurFade delay={0.75} className="flex flex-col gap-8" inView>
-            {Array.isArray(data) &&
-              data.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  project={project}
-                  className="sticky"
-                  style={{
-                    top: `calc(64px + ${index * 40}px)`,
-                  }}
-                />
-              ))}
-          </BlurFade>
-        </div>
+        <BlurFade delay={0.75} className="flex flex-col gap-8" inView>
+          {Array.isArray(data) &&
+            data.map((project, index) => (
+              <ProjectCard
+                key={index}
+                project={project}
+                className="sticky"
+                style={{
+                  top: `calc(64px + ${index * 40}px)`,
+                }}
+              />
+            ))}
+        </BlurFade>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export default function Tape() {
   ];
 
   return (
-    <div className="py-16 lg:py-24 overflow-x-clip">
+    <div className="py-8 sm:py-16 overflow-x-clip">
       <div className="bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 -rotate-3 -mx-1">
         <div className="flex gradient-mask-r-[transparent,black_10%,black_90%,transparent]">
           <div className="flex flex-none gap-4 pr-4 py-8 animate-move-left">

@@ -1,22 +1,26 @@
-import { cn } from "@/lib/utils";
-import { Sparkle } from "lucide-react";
+import { CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { SparkleIcon } from "lucide-react";
+
+interface AboutCardHeaderProps {
+  title: string;
+  description: string;
+}
+
 export default function AboutCardHeader({
   title,
   description,
-  className,
-}: { title: string; description: string; className?: string }) {
+}: AboutCardHeaderProps) {
   return (
-    <div className={cn(`flex flex-col mb-4`, className)}>
-      <div className="inline-flex items-center gap-4 mb-4">
-        <Sparkle className="w-6 h-6 text-primary fill-primary" />
-        <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl font-space_grotesk">
+    <CardHeader>
+      <div className="inline-flex items-center gap-2 md:gap-4">
+        <SparkleIcon className="w-5 h-5 md:w-6 md:h-6 text-primary fill-primary" />
+        <CardTitle className="text-xl md:text-2xl lg:text-3xl font-space_grotesk">
           {title}
-        </h3>
+        </CardTitle>
       </div>
-
-      <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
+      <CardDescription className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-sm">
         {description}
-      </p>
-    </div>
+      </CardDescription>
+    </CardHeader>
   );
 }
