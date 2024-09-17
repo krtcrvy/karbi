@@ -1,5 +1,5 @@
-import { Sparkle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Sparkle } from "lucide-react";
 export default function AboutCardHeader({
   title,
   description,
