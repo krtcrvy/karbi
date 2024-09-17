@@ -62,10 +62,9 @@ export default async function Projects() {
 
           <BlurFade delay={0.5} inView>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
-              Here are some of the projects that I have worked on recently. Each
-              project showcases my skills in web development, including
-              front-end design, back-end integration, and user experience
-              optimization.
+              Take a look at some of my recent projects, where innovation meets
+              impact. Each one tells a story of problem-solving, creativity, and
+              technical expertise.
             </p>
           </BlurFade>
         </div>

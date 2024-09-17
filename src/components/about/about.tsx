@@ -28,7 +28,8 @@ export default function About() {
 
           <BlurFade delay={0.5} inView>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
-              Learn more about who I am, what I do, and what inspires me.
+              Learn more about who I am, what I do, and what inspires me to keep
+              pushing the boundaries of what&apos;s possible.
             </p>
           </BlurFade>
         </div>
