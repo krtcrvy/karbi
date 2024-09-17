@@ -29,7 +29,7 @@ export default function TechStackItems({
         {items.map((tech: TechStackItems, index: number) => (
           <div
             key={index}
-            className="inline-flex items-center gap-4 py-2 px-4 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] rounded-lg bg-background/30 backdrop-blur-sm"
+            className="inline-flex items-center gap-4 py-2 px-4 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] rounded-lg bg-background/30 backdrop-blur-sm shadow"
           >
             <TechIcon component={tech.iconType} />
             <span className="font-semibold">{tech.title}</span>

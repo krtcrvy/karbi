@@ -70,7 +70,7 @@ export default function About() {
               {hobbies.map((hobby, index) => (
                 <div
                   key={index}
-                  className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 rounded-full absolute"
+                  className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 rounded-full absolute shadow"
                   style={{ left: hobby.left, top: hobby.top }}
                 >
                   <span className="font-medium text-stone-950">
@@ -82,9 +82,15 @@ export default function About() {
             </div>
           </AboutCard>
 
-          <AboutCard>
-            <Image src={mapImage} alt="Map" />
-            <Image src={memoji} alt="Smiling Memoji" />
+          <AboutCard className="h-80 p-0 relative">
+            <Image
+              src={mapImage}
+              alt="Map"
+              className="h-full w-full object-cover object-left-top"
+            />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600 outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a] shadow">
+              <Image src={memoji} alt="Smiling Memoji" className="size-20" />
+            </div>
           </AboutCard>
         </div>
       </div>

@@ -65,16 +65,16 @@ export const hobbies = [
     top: "5%",
   },
   {
-    title: "Gaming",
-    emoji: "🎮",
-    left: "10%",
-    top: "35%",
-  },
-  {
     title: "Music",
     emoji: "🎵",
     left: "35%",
     top: "40%",
+  },
+  {
+    title: "Gaming",
+    emoji: "🎮",
+    left: "10%",
+    top: "35%",
   },
   {
     title: "Volunteering",
