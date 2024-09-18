@@ -87,6 +87,7 @@ export default function ProjectCard({
             </div>
           </CardContent>
         </div>
+
         <CardFooter className="md:pt-6">
           <Image
             src={project.image}

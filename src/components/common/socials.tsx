@@ -36,7 +36,7 @@ export default function Socials() {
             href={`mailto:${siteConfig.links.email}`}
             className="text-muted-foreground text-sm tracking-widest transition-colors ease-in [writing-mode:vertical-rl] hover:text-foreground"
           >
-            kurtcarvey.m.cadenas@gmail.com
+            {siteConfig.links.email}
           </Link>
         </div>
       </BlurFade>

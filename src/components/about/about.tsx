@@ -18,8 +18,8 @@ export default function About() {
 
   return (
     <section id="about">
-      <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 lg:px-12 lg:pt-32 lg:pb-16">
-        <div className="mx-auto mb-16 max-w-screen-sm text-center lg:max-w-screen-md">
+      <div className="mx-auto max-w-screen-xl px-4 py-24 lg:px-12">
+        <div className="mx-auto mb-16 max-w-screen-sm text-center">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
               About Me
