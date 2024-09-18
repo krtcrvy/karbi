@@ -90,7 +90,7 @@ export default function ProjectCard({
 
         <CardFooter className="md:pt-6">
           <Image
-            src={project.image}
+            src={`https://raw.githubusercontent.com/krtcrvy/${project.repo}/main/social-preview.jpg`}
             alt={project.repo}
             width={1200}
             height={600}
