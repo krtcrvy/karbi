@@ -39,7 +39,7 @@ export default function Contact() {
         </div>
       </section>
       <Footer />
-      <RetroGrid />
+      <RetroGrid className="-z-10" />
     </div>
   );
 }
