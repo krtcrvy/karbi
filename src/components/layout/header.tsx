@@ -112,20 +112,20 @@ export default function Header() {
                       target="_blank"
                       onClick={() => setSheetOpen(false)}
                     >
-                      <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                      <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
                     </Link>
                     <Link
                       href={siteConfig.links.linkedin}
                       target="_blank"
                       onClick={() => setSheetOpen(false)}
                     >
-                      <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                      <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
                     </Link>
                     <Link
                       href={`mailto:${siteConfig.links.email}`}
                       onClick={() => setSheetOpen(false)}
                     >
-                      <Mail className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                      <Mail className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
                     </Link>
                   </div>
                 </div>
