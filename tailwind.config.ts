@@ -92,6 +92,10 @@ const config = {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "move-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
         "ping-large": {
           "75%, 100%": {
             transform: "scale(3)",
@@ -105,6 +109,7 @@ const config = {
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         shimmer: "shimmer 8s infinite",
         "move-left": "move-left 30s linear infinite",
+        "move-right": "move-right 15s linear infinite",
         "ping-large": "ping-large 1s ease-in-out infinite",
       },
     },

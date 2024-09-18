@@ -1,11 +1,12 @@
+import Socials from "@/components/common/socials";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import { siteConfig } from "@/config/site";
 import { ThemeProvider } from "@/context/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "../styles/globals.css";
-import Socials from "@/components/common/socials";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,7 +78,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable}${spaceGrotesk.variable} font-inter antialiased`}
+        className={cn(
+          inter.variable,
+          spaceGrotesk.variable,
+          `font-inter antialiased`,
+        )}
       >
         <ThemeProvider
           attribute="class"

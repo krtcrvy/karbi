@@ -1,6 +1,7 @@
 import TechIcon from "@/components/common/tech-icon";
 import { cn } from "@/lib/utils";
 import type { TechStackItems } from "@/types";
+import React from "react";
 
 interface TechStackItemsProps {
   items: TechStackItems[];
@@ -26,14 +27,18 @@ export default function TechStackItems({
           itemsWrapperClassName,
         )}
       >
-        {items.map((tech: TechStackItems, index: number) => (
-          <div
-            key={index}
-            className="inline-flex items-center gap-4 rounded-lg bg-background/30 px-3 py-2 shadow outline outline-2 outline-[#0c0a091a] backdrop-blur-sm dark:outline-[#fafaf91a]"
-          >
-            <TechIcon component={tech.iconType} />
-            <span className="font-semibold">{tech.title}</span>
-          </div>
+        {[...new Array(2)].fill(0).map((_, index) => (
+          <React.Fragment key={index}>
+            {items.map((tech: TechStackItems, index: number) => (
+              <div
+                key={index}
+                className="inline-flex items-center gap-4 rounded-lg bg-background/30 px-3 py-2 shadow outline outline-2 outline-[#0c0a091a] backdrop-blur-sm dark:outline-[#fafaf91a]"
+              >
+                <TechIcon component={tech.iconType} />
+                <span className="font-semibold">{tech.title}</span>
+              </div>
+            ))}
+          </React.Fragment>
         ))}
       </div>
     </div>
