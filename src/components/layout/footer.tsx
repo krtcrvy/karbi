@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -5,7 +8,15 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-lg">
         <div className="flex items-center justify-center">
           <span className="text-center text-muted-foreground text-sm">
-            &copy; {year} Kurt Carvey Cadenas. All Rights Reserved.
+            &copy; {year}{" "}
+            <Link
+              href={siteConfig.links.github}
+              target="_blank"
+              className="hover:underline"
+            >
+              Kurt Carvey Cadenas
+            </Link>
+            . All Rights Reserved.
           </span>
         </div>
       </div>

@@ -11,6 +11,7 @@ export type SiteConfig = {
     twitter: string;
     linkedin: string;
     email: string;
+    resume: string;
   };
 };
 

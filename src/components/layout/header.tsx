@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { siteConfig } from "@/config/site";
 import { paths } from "@/consts";
 import { useScroll } from "@/hooks/use-scroll";
 import { Path } from "@/types";
@@ -57,7 +58,11 @@ export default function Header() {
 
             <div className="flex items-center gap-2">
               <ModeToggle />
-              <Button>Resume</Button>
+              <Button asChild>
+                <Link href={siteConfig.links.resume} target="_blank">
+                  Resume
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -92,9 +97,9 @@ export default function Header() {
                 </nav>
 
                 <div className="mt-auto flex flex-col gap-8">
-                  <Button size="lg" asChild>
+                  <Button asChild>
                     <Link
-                      href="https://rebrand.ly/kc-cadenas-resume"
+                      href={siteConfig.links.resume}
                       target="_blank"
                       onClick={() => setSheetOpen(false)}
                     >
@@ -103,21 +108,21 @@ export default function Header() {
                   </Button>
                   <div className="flex items-center justify-around">
                     <Link
-                      href="https://github.com/krtcrvy"
+                      href={siteConfig.links.github}
                       target="_blank"
                       onClick={() => setSheetOpen(false)}
                     >
                       <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
                     </Link>
                     <Link
-                      href="https://www.linkedin.com/in/kurtcarvey-cadenas/"
+                      href={siteConfig.links.linkedin}
                       target="_blank"
                       onClick={() => setSheetOpen(false)}
                     >
                       <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
                     </Link>
                     <Link
-                      href="mailto:kurtcarvey.m.cadenas@gmail.com"
+                      href={`mailto:${siteConfig.links.email}`}
                       onClick={() => setSheetOpen(false)}
                     >
                       <Mail className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />

@@ -14,5 +14,6 @@ export const siteConfig: SiteConfig = {
     twitter: "https://x.com/krtcrvy",
     linkedin: "https://www.linkedin.com/in/kurtcarvey-cadenas",
     email: "kurtcarvey.m.cadenas@gmail.com",
+    resume: "https://rebrand.ly/kc-cadenas-resume",
   },
 };
