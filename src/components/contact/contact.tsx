@@ -1,12 +1,16 @@
+"use client";
+
+import Footer from "@/components/layout/footer";
 import BlurFade from "@/components/magicui/blur-fade";
+import RetroGrid from "@/components/magicui/retro-grid";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section id="contact">
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:px-12">
+    <div id="contact" className="relative flex flex-col items-center">
+      <section className="mx-auto max-w-screen-xl px-4 py-32 lg:px-12">
         <div className="mx-auto mb-16 max-w-screen-sm text-center">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
@@ -33,7 +37,9 @@ export default function Contact() {
             </Button>
           </BlurFade>
         </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+      <RetroGrid />
+    </div>
   );
 }

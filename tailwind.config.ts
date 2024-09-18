@@ -102,6 +102,10 @@ const config = {
             opacity: "0",
           },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -111,6 +115,7 @@ const config = {
         "move-left": "move-left 30s linear infinite",
         "move-right": "move-right 15s linear infinite",
         "ping-large": "ping-large 1s ease-in-out infinite",
+        grid: "grid 15s linear infinite",
       },
     },
   },
