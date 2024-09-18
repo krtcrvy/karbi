@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/context/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/globals.css";
 
 const inter = Inter({
@@ -95,6 +96,7 @@ export default function RootLayout({
           <Socials />
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
