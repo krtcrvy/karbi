@@ -5,12 +5,30 @@ import ScrollLink from "@/components/common/scroll-link";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { paths } from "@/consts";
 import { useScroll } from "@/hooks/use-scroll";
 import { Path } from "@/types";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import { Mail, Menu } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [sheetOpen, setSheetOpen] = useState(false);
   const scrolled = useScroll(50);
+
+  const handleSheetClose = () => {
+    setSheetOpen((prev) => !prev);
+  };
 
   return (
     <header
@@ -41,6 +59,73 @@ export default function Header() {
               <ModeToggle />
               <Button>Resume</Button>
             </div>
+          </div>
+
+          <div className="inline-flex items-center gap-2 lg:hidden">
+            <ModeToggle />
+            <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="shrink-0">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="flex flex-col" side="right">
+                <SheetHeader>
+                  <VisuallyHidden.Root>
+                    <SheetTitle>Main Menu</SheetTitle>
+                    <SheetDescription>Toggle main menu</SheetDescription>
+                  </VisuallyHidden.Root>
+                </SheetHeader>
+                <nav className="grid gap-8 font-medium text-lg">
+                  <Logo />
+                  {paths.map(({ name }: Path, index: number) => (
+                    <ScrollLink
+                      id={name.toLowerCase()}
+                      key={index}
+                      className="text-muted-foreground transition-colors ease-in hover:text-primary"
+                      onHandleSheetClose={handleSheetClose}
+                    >
+                      {name}
+                    </ScrollLink>
+                  ))}
+                </nav>
+
+                <div className="mt-auto flex flex-col gap-8">
+                  <Button size="lg" asChild>
+                    <Link
+                      href="https://rebrand.ly/kc-cadenas-resume"
+                      target="_blank"
+                      onClick={() => setSheetOpen(false)}
+                    >
+                      Resume
+                    </Link>
+                  </Button>
+                  <div className="flex items-center justify-around">
+                    <Link
+                      href="https://github.com/krtcrvy"
+                      target="_blank"
+                      onClick={() => setSheetOpen(false)}
+                    >
+                      <GitHubLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                    </Link>
+                    <Link
+                      href="https://www.linkedin.com/in/kurtcarvey-cadenas/"
+                      target="_blank"
+                      onClick={() => setSheetOpen(false)}
+                    >
+                      <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                    </Link>
+                    <Link
+                      href="mailto:kurtcarvey.m.cadenas@gmail.com"
+                      onClick={() => setSheetOpen(false)}
+                    >
+                      <Mail className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-primary" />
+                    </Link>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </nav>
       </BlurFade>

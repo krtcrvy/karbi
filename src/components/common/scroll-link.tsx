@@ -6,12 +6,14 @@ import { MouseEvent, ReactNode } from "react";
 interface ScrollLinkProps {
   id: string;
   children: ReactNode;
+  onHandleSheetClose?: () => void;
   className?: string;
 }
 
 export default function ScrollLink({
   id,
   children,
+  onHandleSheetClose,
   className,
 }: ScrollLinkProps) {
   const handleClick = (e: MouseEvent<HTMLDivElement>) => {
@@ -25,7 +27,12 @@ export default function ScrollLink({
   };
 
   return (
-    <Link href={`#${id}`} className={className} passHref>
+    <Link
+      href={`#${id}`}
+      className={className}
+      onClick={onHandleSheetClose}
+      passHref
+    >
       <div onClick={handleClick}>{children}</div>
     </Link>
   );
