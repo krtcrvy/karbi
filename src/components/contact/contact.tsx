@@ -14,26 +14,26 @@ export default function Contact() {
         <div className="mx-auto mb-16 max-w-screen-sm text-center">
           <BlurFade inView>
             <span className="mb-4 inline-block font-semibold text-primary text-sm uppercase tracking-wider md:text-base">
-              Let&apos;s connect
+              Get in Touch
             </span>
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
             <h2 className="mb-8 font-bold font-space_grotesk text-3xl md:text-4xl lg:text-5xl">
-              Get in Touch
+              Let&apos;s create something amazing together
             </h2>
           </BlurFade>
 
           <BlurFade delay={0.5} inView>
             <p className="mb-8 text-base text-muted-foreground md:text-lg lg:text-xl">
-              My inbox is always open! Whether you have a question or just want
-              to say hi, I&apos;ll try my best to get back to you!
+              Ready to bring your next project to life? Let&apos;s connect and
+              discuss how I can help you acheive your goals.
             </p>
           </BlurFade>
 
           <BlurFade delay={0.75} inView>
             <Button size="lg" asChild>
-              <Link href={`mailto:${siteConfig.links.email}`}>Say Hello</Link>
+              <Link href={`mailto:${siteConfig.links.email}`}>Contact Me</Link>
             </Button>
           </BlurFade>
         </div>
