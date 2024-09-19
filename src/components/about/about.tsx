@@ -79,6 +79,7 @@ export default function About() {
 
           <BlurFade
             className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3"
+            delay={0.25}
             inView
           >
             <AboutCard className="flex h-80 flex-col md:col-span-3 lg:col-span-2">
