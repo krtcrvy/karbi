@@ -41,104 +41,84 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <BlurFade
-              delay={0.75}
-              className="md:col-span-2 lg:col-span-1"
-              inView
-            >
-              <AboutCard className="h-80">
-                <AboutCardHeader
-                  title="My Reads"
-                  description="Explore the books shaping my perspectives."
-                />
-                <CardContent>
-                  <div className="mx-auto w-40">
-                    <Image src={bookImage} alt="Book cover" priority />
-                  </div>
-                </CardContent>
-              </AboutCard>
-            </BlurFade>
-
-            <BlurFade delay={1} className="md:col-span-3 lg:col-span-2" inView>
-              <AboutCard className="h-80">
-                <AboutCardHeader
-                  title="My Tech Stack"
-                  description=" Explore the technologies and tools I use to craft exceptional digital experiences."
-                />
-                <CardContent>
-                  <TechStackItems
-                    items={techStackItems}
-                    className="mb-6"
-                    itemsWrapperClassName="animate-move-left"
-                  />
-                  <TechStackItems
-                    items={techStackItems}
-                    itemsWrapperClassName="-translate-x-1/2 animate-move-right"
-                  />
-                </CardContent>
-              </AboutCard>
-            </BlurFade>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <BlurFade
-              delay={0.25}
-              className="md:col-span-3 lg:col-span-2"
-              inView
-            >
-              <AboutCard className="flex h-80 flex-col">
-                <AboutCardHeader
-                  title="Beyond the Code"
-                  description="Explore my interests and hobbies beyond the digital realm."
-                />
-
-                <CardContent
-                  className="relative flex-1 pt-6"
-                  ref={constraintRef}
-                >
-                  {hobbies.map((hobby, index) => (
-                    <motion.div
-                      key={index}
-                      className="absolute inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-1.5 shadow dark:from-orange-500 dark:to-orange-600"
-                      style={{ left: hobby.left, top: hobby.top }}
-                      drag
-                      dragConstraints={constraintRef}
-                    >
-                      <span className="font-medium text-stone-950">
-                        {hobby.title}
-                      </span>
-                      <span>{hobby.emoji}</span>
-                    </motion.div>
-                  ))}
-                </CardContent>
-              </AboutCard>
-            </BlurFade>
-
-            <BlurFade
-              delay={0.5}
-              className="md:col-span-2 lg:col-span-1"
-              inView
-            >
-              <AboutCard className="relative h-80">
-                <Image
-                  src={mapImage}
-                  alt="Map"
-                  className="h-full w-full rounded-xl object-cover object-left-top"
-                  priority
-                />
-                <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-20 rounded-full shadow outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a]">
-                  <div className="-z-20 absolute inset-0 animate-ping rounded-full bg-gradient-to-r from-orange-400 to-orange-500 [animation-duration:2s] dark:from-orange-500 dark:to-orange-600" />
-                  <div className="-z-10 absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600" />
-                  <Image
-                    src={memoji}
-                    alt="Smiling Memoji"
-                    className="size-20"
-                  />
+          <BlurFade
+            delay={0.75}
+            className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3"
+            inView
+          >
+            <AboutCard className="h-80 md:col-span-2 lg:col-span-1">
+              <AboutCardHeader
+                title="My Reads"
+                description="Explore the books shaping my perspectives."
+              />
+              <CardContent>
+                <div className="mx-auto w-40">
+                  <Image src={bookImage} alt="Book cover" priority />
                 </div>
-              </AboutCard>
-            </BlurFade>
-          </div>
+              </CardContent>
+            </AboutCard>
+
+            <AboutCard className="h-80 md:col-span-3 lg:col-span-2">
+              <AboutCardHeader
+                title="My Tech Stack"
+                description=" Explore the technologies and tools I use to craft exceptional digital experiences."
+              />
+              <CardContent>
+                <TechStackItems
+                  items={techStackItems}
+                  className="mb-6"
+                  itemsWrapperClassName="animate-move-left"
+                />
+                <TechStackItems
+                  items={techStackItems}
+                  itemsWrapperClassName="-translate-x-1/2 animate-move-right"
+                />
+              </CardContent>
+            </AboutCard>
+          </BlurFade>
+
+          <BlurFade
+            className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3"
+            inView
+          >
+            <AboutCard className="flex h-80 flex-col md:col-span-3 lg:col-span-2">
+              <AboutCardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies beyond the digital realm."
+              />
+
+              <CardContent className="relative flex-1 pt-6" ref={constraintRef}>
+                {hobbies.map((hobby, index) => (
+                  <motion.div
+                    key={index}
+                    className="absolute inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-1.5 shadow dark:from-orange-500 dark:to-orange-600"
+                    style={{ left: hobby.left, top: hobby.top }}
+                    drag
+                    dragConstraints={constraintRef}
+                  >
+                    <span className="font-medium text-stone-950">
+                      {hobby.title}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </motion.div>
+                ))}
+              </CardContent>
+            </AboutCard>
+
+            <AboutCard className="relative h-80 md:col-span-2 lg:col-span-1">
+              <Image
+                src={mapImage}
+                alt="Map"
+                className="h-full w-full rounded-xl object-cover object-left-top"
+                priority
+              />
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-20 rounded-full shadow outline outline-2 outline-[#0c0a091a] dark:outline-[#fafaf91a]">
+                <div className="-z-20 absolute inset-0 animate-ping rounded-full bg-gradient-to-r from-orange-400 to-orange-500 [animation-duration:2s] dark:from-orange-500 dark:to-orange-600" />
+                <div className="-z-10 absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-600" />
+                <Image src={memoji} alt="Smiling Memoji" className="size-20" />
+              </div>
+            </AboutCard>
+          </BlurFade>
         </div>
       </div>
     </section>
