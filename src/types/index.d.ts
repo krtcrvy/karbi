@@ -28,14 +28,14 @@ export type TechStackItems = {
 // *API*
 // Github
 export type Repo = {
-  repo: string;
+  name: string;
+  url: string;
+  stargazerCount: number;
   description: string;
-  language: string;
-  languageColor: string;
-  stars: number;
-  link: string;
-  website: string;
-  image: string;
-  forks: number;
-  owner: string;
+  forkCount: number;
+  homepageUrl: string;
+  languages: {
+    name: string;
+    color: string;
+  }[];
 };

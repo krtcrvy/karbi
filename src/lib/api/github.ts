@@ -1,21 +1,16 @@
-import wretch from "wretch";
-
 import { env } from "@/env.mjs";
+import { Client } from "get-pinned-repos";
 
-const apiUrl = env.GH_API_URL;
+const GH_ACCESS_TOKEN = env.GH_ACCESS_TOKEN;
+const GH_USERNAME = env.GH_USERNAME;
 
-// Instantiate and configure wretch
-const api = wretch(apiUrl, {
-  cache: "no-store",
-  mode: "cors",
-})
-  .errorType("json")
-  .resolve((r) => r.json());
+Client.setToken(GH_ACCESS_TOKEN);
 
 // Fetch my pinned repository
 export const getRepo = async () => {
   try {
-    return await api.get("/?username=krtcrvy");
+    const pinned = await Client.getPinnedRepos(GH_USERNAME);
+    return pinned;
   } catch (error) {
     console.error("Error fetching data:", error);
     return { error: "Failed fetching data" };

@@ -12,10 +12,11 @@ import {
 import { cn } from "@/lib/utils";
 import { Repo } from "@/types";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { GitFork, Globe, Star, User } from "lucide-react";
+import { GitFork, Globe, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Badge } from "../ui/badge";
 
 interface ProjectCardProps {
   project: Repo;
@@ -34,41 +35,44 @@ export default function ProjectCard({
         <div>
           <CardHeader>
             <CardTitle className="font-space_grotesk text-xl md:text-2xl lg:text-3xl">
-              {project.repo}
+              {project.name}
             </CardTitle>
             <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
               {project.description}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="mb-6 flex flex-col gap-2 text-muted-foreground md:flex-row lg:items-center lg:gap-4">
-              <div className="flex items-center gap-2">
-                <User className="h-5 w-5" />
-                <span className="text-sm md:text-base">{project.owner}</span>
-              </div>
-
-              <span className="hidden md:block">•</span>
-
+            <div className="mb-4 flex flex-col gap-4 text-muted-foreground md:flex-row lg:items-center">
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5" />
-                <span className="text-sm lg:text-base">{project.stars}</span>
+                <span className="text-sm lg:text-base">
+                  {project.stargazerCount}
+                </span>
               </div>
-
-              <span className="hidden md:block">•</span>
 
               <div className="flex items-center gap-2">
                 <GitFork className="h-5 w-5" />
-                <span className="text-sm md:text-base">{project.forks}</span>
+                <span className="text-sm md:text-base">
+                  {project.forkCount}
+                </span>
               </div>
+            </div>
+
+            <div className="mb-6 flex gap-2">
+              {project.languages.map((lang) => (
+                <Badge key={lang.name} variant="secondary">
+                  {lang.name}
+                </Badge>
+              ))}
             </div>
 
             <div className="flex items-center gap-2">
               <Button variant="outline" size="icon" asChild>
                 <Link
                   target="_blank"
-                  href={project.website}
+                  href={project.homepageUrl}
                   rel="noopener noreferrer"
-                  aria-label={project.repo}
+                  aria-label={project.name}
                 >
                   <Globe className="h-6 w-6" />
                 </Link>
@@ -77,9 +81,9 @@ export default function ProjectCard({
               <Button variant="outline" size="icon" asChild>
                 <Link
                   target="_blank"
-                  href={project.link}
+                  href={project.url}
                   rel="noopener noreferrer"
-                  aria-label={project.repo}
+                  aria-label={project.name}
                 >
                   <GitHubLogoIcon className="h-6 w-6" />
                 </Link>
@@ -90,8 +94,8 @@ export default function ProjectCard({
 
         <CardFooter className="md:pt-6">
           <Image
-            src={`https://raw.githubusercontent.com/krtcrvy/${project.repo}/main/social-preview.jpg`}
-            alt={project.repo}
+            src={`https://raw.githubusercontent.com/krtcrvy/${project.name}/main/social-preview.jpg`}
+            alt={project.name}
             width={1200}
             height={600}
             className="rounded-xl"
