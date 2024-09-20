@@ -9,7 +9,7 @@ Client.setToken(GH_ACCESS_TOKEN);
 // Fetch my pinned repository
 export const getRepo = async () => {
   try {
-    const pinned = await Client.getPinnedRepos(GH_USERNAME);
+    const pinned = Client.getPinnedRepos(GH_USERNAME);
     return pinned;
   } catch (error) {
     console.error("Error fetching data:", error);
