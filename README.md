@@ -38,7 +38,7 @@ Create a [`.env.local`](command:_github.copilot.openRelativePath?%5B%7B%22scheme
 Run the development server:
 
 ```bash
-pnpm dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
