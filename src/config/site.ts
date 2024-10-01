@@ -15,6 +15,6 @@ export const siteConfig: SiteConfig = {
     linkedin: "https://www.linkedin.com/in/kurtcarvey-cadenas",
     email: "kurtcarvey.m.cadenas@gmail.com",
     resume:
-      "https://drive.google.com/file/d/1UZMXwKwiQ32oMhiztvYa8070gGa-VVp7/view?usp=sharing",
+      "https://drive.google.com/file/d/16OQGu47vpXpTBhVnehUiLKlgSsWLFN-i/view?usp=sharing",
   },
 };
