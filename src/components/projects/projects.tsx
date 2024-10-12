@@ -3,11 +3,15 @@ import ProjectCard from "@/components/projects/project-card";
 import ProjectsSkeleton from "@/components/projects/projects-skeleton";
 import { getRepo } from "@/lib/api/github";
 import { Repo } from "@/types";
+import { headers } from "next/headers";
 
 type RepoData = Repo[] | { error: string };
 
 export default async function Projects() {
   const data = (await getRepo()) as RepoData;
+
+  const responseHeaders = headers();
+  responseHeaders.set("Cache-Control", "no-store");
 
   if ("error" in data) {
     return (
